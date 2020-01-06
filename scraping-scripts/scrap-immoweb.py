@@ -3,15 +3,6 @@ import requests
 import re
 from bs4 import BeautifulSoup
 
-class Asset:
-    def __init__(self, id, url, desc, title, location, photos):
-        self.id = id
-        self.url = url
-        self.desc = desc
-        self.title = title
-        self.location = location
-        self.photos = photos
-
 def extractAndAppend(soup):
     # #########################################
     #       1# Extract Info
@@ -84,3 +75,12 @@ for code in codes_communes_bxl:
             src = result.content
             soup = BeautifulSoup(src, "lxml")
             extractAndAppend(soup)
+
+class Asset:
+    def __init__(self, id, url, desc, title, location, photos):
+        self.id = id
+        self.url = url
+        self.desc = desc
+        self.title = title
+        self.location = location
+        self.photos = photos
