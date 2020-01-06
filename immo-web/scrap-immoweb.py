@@ -49,9 +49,9 @@ with open('csv/immoweb.csv', 'w') as csvfile:
     filewriter = csv.writer(csvfile, delimiter=',', quotechar='|')
     filewriter.writerow(['Id', 'Url', 'Price', 'Size', 'Title', 'Description', 'Location', 'Photo'])
 
-codes_communes = [1000, 1030, 1040, 1050, 1060, 1070, 1080, 1081, 1082, 1083, 1090, 1140, 1150, 1160, 1170, 1180, 1190, 1200, 1210]
+codes_communes_bxl = [1000, 1030, 1040, 1050, 1060, 1070, 1080, 1081, 1082, 1083, 1090, 1140, 1150, 1160, 1170, 1180, 1190, 1200, 1210]
 
-for code in codes_communes:
+for code in codes_communes_bxl:
 
     # #########################################
     #       1# Request page for url
